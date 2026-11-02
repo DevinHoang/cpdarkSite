@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CP Brand Việt Nam – Crisis Dark Site</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Black-and-white version of the brand site: red -> near-black, yellow -> light grey. */
+  --dark: #1A1A1A;
+  --dark-2: #2B2B2B;
+  --mid: #8C8C8C;
+  --light: #D4D4D4;
+  --cream: #F1F1F1;
+  --line: #DEDEDE;
+  --ink: #1E1E1E;
+  --muted: #666;
+  --paper: #FFFFFF;
+  --font: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.55; }
+img, .ph { filter: grayscale(1); }
+a { color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--mid); outline-offset: 2px; }
+h1, h2, h3 { margin: 0; line-height: 1.25; text-wrap: balance; }
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+/* header */
+.top { background: var(--dark); color: #fff; }
+.top .wrap { display: flex; align-items: center; gap: 20px; padding-top: 12px; padding-bottom: 12px; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: .3px; font-size: 17px; }
+.logo .mark { width: 38px; height: 38px; border-radius: 50%; border: 2px solid #fff; display: grid; place-items: center; font-size: 13px; }
+.search { flex: 1 1 280px; display: flex; max-width: 520px; margin: 0 auto; }
+.search input { flex: 1; min-width: 0; border: 0; padding: 8px 12px; font: inherit; font-size: 14px; border-radius: 4px 0 0 4px; }
+.search button { border: 0; background: var(--light); color: var(--dark); padding: 0 16px; border-radius: 0 4px 4px 0; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+.menu { background: var(--dark); border-top: 1px solid #333; color: #fff; }
+.menu .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 26px; padding-top: 10px; padding-bottom: 10px; font-size: 14px; }
+.menu a.cur { border-bottom: 2px solid #fff; padding-bottom: 2px; }
+.menu .shops { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+.menu .shops span { border: 1px solid #fff; border-radius: 999px; padding: 3px 12px; font-size: 12px; font-weight: 700; }
+
+/* banner */
+.banner { background: linear-gradient(115deg, #F4F4F4 0%, #FFFFFF 55%, #EAEAEA 100%); border-bottom: 1px solid var(--line); }
+.banner .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) minmax(0, .6fr); gap: 24px; align-items: center; padding-top: 34px; padding-bottom: 34px; }
+@media (max-width: 860px) { .banner .wrap { grid-template-columns: 1fr; } }
+.banner .slogan { font-weight: 800; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.1; color: var(--dark); }
+.banner .slogan small { display: block; font-size: 14px; font-weight: 700; letter-spacing: 1px; color: var(--muted); margin-top: 6px; }
+.banner .claim { margin-top: 18px; font-weight: 800; font-size: clamp(20px, 2.6vw, 28px); line-height: 1.15; color: var(--dark-2); text-transform: uppercase; }
+.badges { display: grid; gap: 10px; }
+.badges span { background: var(--dark); color: #fff; padding: 10px 14px; border-radius: 6px; font-weight: 700; font-size: 14px; }
+.ph { border: 2px dashed #BDBDBD; background: #FAFAFA; border-radius: 12px; display: grid; place-items: center; color: var(--muted); font-size: 13px; text-align: center; padding: 10px; }
+.banner .ph { aspect-ratio: 4/3; }
+
+/* model */
+.model { background: linear-gradient(180deg, var(--light) 0 50%, var(--dark-2) 50% 100%); }
+.model .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: center; padding-top: 48px; padding-bottom: 48px; }
+@media (max-width: 760px) { .model .wrap { grid-template-columns: 1fr; } .model { background: var(--dark-2); } }
+.about { background: rgba(20,20,20,.9); color: #fff; padding: 26px; border-radius: 4px; text-align: center; }
+.about .k { font-size: 12px; letter-spacing: 1.2px; color: #BBB; }
+.about h2 { font-size: 20px; font-weight: 500; letter-spacing: .5px; margin: 4px 0 12px; text-transform: uppercase; }
+.about p { text-align: left; font-size: 14px; margin: 0 0 16px; }
+.btn { display: inline-block; font: inherit; font-size: 14px; font-weight: 600; padding: 8px 20px; border-radius: 4px; border: 0; cursor: pointer; background: var(--dark); color: #fff; }
+.btn.light { background: var(--light); color: var(--dark); }
+.ffff { background: #111; color: #fff; border-radius: 8px; padding: 22px; }
+.ffff h3 { text-align: center; font-size: clamp(20px, 2.6vw, 28px); font-weight: 800; letter-spacing: .5px; }
+.ffff .sub { text-align: center; font-size: 12px; color: #BBB; margin-bottom: 14px; }
+.ffff .cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 520px) { .ffff .cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ffff b { display: block; font-size: 15px; }
+.ffff .tag { display: inline-block; font-size: 10px; background: #444; padding: 1px 6px; border-radius: 3px; margin: 2px 0 4px; }
+.ffff p { margin: 0; font-size: 11px; color: #CCC; line-height: 1.45; }
+
+/* sections */
+.sec { padding: 44px 0; }
+.cream { background: var(--cream); }
+.sec-sub { text-align: center; font-size: 12px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
+.sec-title { text-align: center; font-size: 22px; font-weight: 600; letter-spacing: .4px; text-transform: uppercase; }
+.divider { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 10px 0 24px; }
+.divider::before, .divider::after { content: ""; width: 40px; height: 1px; background: var(--mid); }
+.divider i { width: 8px; height: 8px; border: 1px solid var(--mid); transform: rotate(45deg); }
+.certs { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+.certs span { width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--dark); display: grid; place-items: center; font-size: 10px; font-weight: 800; text-align: center; line-height: 1.1; padding: 4px; background: #fff; }
+.certs span.wide { width: auto; border-radius: 999px; padding: 0 16px; }
+.tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.tabs button { font: inherit; font-size: 12px; border: 1px solid var(--mid); background: #F7F7F7; color: var(--muted); border-radius: 4px; padding: 4px 14px; cursor: pointer; }
+.tabs button[aria-pressed="true"] { background: var(--dark); color: #fff; border-color: var(--dark); }
+.products { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 760px) { .products { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.prod { background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.08); text-align: center; }
+.prod .ph { aspect-ratio: 1.15; margin: 16px; border-radius: 10px; }
+.prod b { display: block; border-top: 2px solid var(--dark); padding: 12px 10px 14px; font-size: 13px; font-weight: 500; }
+.center { text-align: center; margin-top: 24px; }
+.news { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+@media (max-width: 860px) { .news { grid-template-columns: 1fr; } }
+.news .main .ph { aspect-ratio: 16/10; border-radius: 6px; margin-bottom: 8px; }
+.news .main b { font-size: 15px; text-transform: uppercase; }
+.news ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.news li { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px; font-size: 13px; }
+.news li .ph { aspect-ratio: 4/3; border-radius: 4px; font-size: 10px; padding: 4px; }
+time { display: block; color: var(--mid); font-size: 12px; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.partners { display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 18px; }
+.partners span { font-weight: 800; font-size: 18px; color: var(--muted); letter-spacing: .3px; }
+.partners span.box { background: var(--dark-2); color: #fff; padding: 6px 14px; font-size: 14px; }
+
+/* footer */
+footer { background: var(--dark); color: #E6E6E6; font-size: 13.5px; }
+footer .cols { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 26px; padding-top: 40px; padding-bottom: 30px; }
+@media (max-width: 860px) { footer .cols { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { footer .cols { grid-template-columns: 1fr; } }
+footer h3 { font-size: 13px; letter-spacing: .6px; text-transform: uppercase; color: #fff; margin-bottom: 10px; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+footer p { margin: 0 0 8px; }
+footer .co { font-weight: 700; color: #fff; }
+footer .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+footer .chips span { background: #fff; color: var(--dark); font-size: 10px; font-weight: 800; padding: 3px 7px; border-radius: 3px; }
+footer .copy { background: #0E0E0E; text-align: center; font-size: 12.5px; padding: 10px 20px; color: #CFCFCF; }
+footer .copy small { display: block; color: #9A9A9A; margin-top: 2px; }
+.toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: #111; color: #fff; padding: 10px 16px; border-radius: 6px; font-size: 14px; max-width: calc(100% - 32px); opacity: 0; pointer-events: none; transition: opacity .2s; }
+.toast.show { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .toast { transition: none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <div class="wrap">
+      <a class="logo" href="#"><span class="mark">CP</span>CP BRAND VIETNAM</a>
+      <form class="search" id="searchForm" role="search">
+        <label for="q" style="position:absolute;left:-9999px">Tìm sản phẩm</label>
+        <input id="q" type="text" placeholder="Tìm sản phẩm…">
+        <button type="submit">Tìm</button>
+      </form>
+    </div>
+  </div>
+  <nav class="menu" aria-label="Menu chính">
+    <div class="wrap">
+      <a href="#" class="cur">Trang chủ</a>
+      <a href="#">Giới thiệu</a>
+      <a href="#">CP 3 An Toàn</a>
+      <a href="#">Sản phẩm ▾</a>
+      <a href="#">Tin tức ▾</a>
+      <a href="#">Khuyến mãi</a>
+      <a href="#">Liên hệ</a>
+      <span class="shops"><span>FIVE STAR</span><span>CP FOOD</span><span>FRESH SHOP</span></span>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="banner">
+    <div class="wrap">
+      <div>
+        <div class="slogan">FROM FARM<br>TO GLOBAL<small>FROM CPV FOOD</small></div>
+        <div class="claim">Trusted quality<br>delivered worldwide</div>
+      </div>
+      <div class="ph">[Ảnh banner sản phẩm – hiển thị đen trắng]</div>
+      <div class="badges">
+        <span>Strict Quality Standard</span>
+        <span>International Certifications</span>
+        <span>Advanced Process Food Safety</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="model">
+    <div class="wrap">
+      <div class="about">
+        <div class="k">CP BRAND VIETNAM</div>
+        <h2>Sơ lược về chúng tôi</h2>
+        <p>CP Brand Vietnam tự hào là đơn vị áp dụng mô hình tích hợp Feed – Farm – Food với quy trình chăn nuôi và sản xuất khép kín đầu tiên tại Việt Nam.</p>
+        <a class="btn light" href="#">Xem chi tiết</a>
+      </div>
+      <div class="ffff">
+        <h3>FEED – FARM – FOOD</h3>
+        <div class="sub">MÔ HÌNH TÍCH HỢP FEED – FARM – FOOD</div>
+        <div class="cols">
+          <div><b>FEED</b><span class="tag">Thức ăn chăn nuôi</span><p>Cung cấp dinh dưỡng phù hợp cho từng giai đoạn, kiểm soát chất lượng.</p></div>
+          <div><b>FARM</b><span class="tag">Trang trại</span><p>Chăn nuôi theo tiêu chuẩn, an toàn sinh học, truy xuất nguồn gốc.</p></div>
+          <div><b>FOOD</b><span class="tag">Thực phẩm</span><p>Chế biến hiện đại, kiểm nghiệm nghiêm ngặt trước khi đến tay người tiêu dùng.</p></div>
+          <div><b>SUSTAINABILITY</b><span class="tag">Phát triển bền vững</span><p>Hướng tới phát triển bền vững cho môi trường và cộng đồng.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec cream">
+    <div class="wrap">
+      <div class="sec-sub">CPV Food</div>
+      <h2 class="sec-title">Chứng nhận</h2>
+      <div class="divider"><i></i></div>
+      <div class="certs">
+        <span>HACCP</span><span>GMP</span><span>FSSC 22000</span><span>ISO</span><span>BRCGS</span><span>LRQA</span>
+        <span class="wide">GLOBALG.A.P.</span><span class="wide">VietGAP</span><span>HACCP</span><span>GMP</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec cream" style="padding-top:8px">
+    <div class="wrap">
+      <h2 class="sec-title">Sản phẩm của chúng tôi</h2>
+      <div class="divider"><i></i></div>
+      <div class="tabs" data-tabs>
+        <button type="button" aria-pressed="true">Thịt Gà CP</button>
+        <button type="button" aria-pressed="false">Thịt Gà Chế Biến CP</button>
+        <button type="button" aria-pressed="false">Thịt Heo Ướp Sẵn CP</button>
+        <button type="button" aria-pressed="false">Thịt Heo CP</button>
+      </div>
+      <div class="products">
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Selection Ức Phi lê Tươi</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Selection Ức Có Da Có Xương Tươi</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Selection Sụn Ức Tươi</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Selection Thịt Ức Vụn Tươi</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Selection Lườn Gà Tươi</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Selection Đùi Tỏi Tươi</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Selection Đùi Tỏi Phi Lê Tươi</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Selection Má Đùi Tươi</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec cream" style="padding-top:8px">
+    <div class="wrap">
+      <h2 class="sec-title">Sản phẩm của chúng tôi</h2>
+      <div class="divider"><i></i></div>
+      <div class="tabs" data-tabs>
+        <button type="button" aria-pressed="true">Snack Ăn Vặt CP</button>
+        <button type="button" aria-pressed="false">Ready Meal CP</button>
+        <button type="button" aria-pressed="false">Thịt Gà Ướp Sẵn CP</button>
+        <button type="button" aria-pressed="false">Xúc Xích Thanh Trùng CP</button>
+      </div>
+      <div class="products">
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Snack Chân Gà Sựt Sựt – Vị BBQ</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Snack Chân Gà Sựt Sựt – Vị Tomyum</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Snack Chân Gà Sựt Sựt – Vị Tứ Xuyên</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Snack Chân Gà Sựt Sựt – Vị Thảo Mộc</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Snack Chân Gà Sựt Sựt – Vị Siêu Cay</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Snack Xúc Xích – Xốt Gochujang</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Snack Xúc Xích – Phô Mai Cube</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Snack Xúc Xích – Original Classic</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Da Cá Chiên Giòn</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Da Cá Chiên Giòn Vị Thái</b></div>
+        <div class="prod"><div class="ph">[ảnh sản phẩm]</div><b>CP Da Cá Chiên Giòn Trứng Muối</b></div>
+      </div>
+      <div class="center"><a class="btn" href="#">Xem tất cả</a></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title">Tin tức</h2>
+      <div class="divider"><i></i></div>
+      <div class="news">
+        <div class="main"><div class="ph">[ảnh tin nổi bật]</div><b>[Tiêu đề tin nổi bật]</b><time>[ngày/tháng/năm]</time></div>
+        <ul>
+          <li><div class="ph">[ảnh]</div><div>[Tiêu đề tin tức doanh nghiệp]<time>[ngày/tháng/năm]</time></div></li>
+          <li><div class="ph">[ảnh]</div><div>[Tiêu đề tin xuất khẩu, hợp tác]<time>[ngày/tháng/năm]</time></div></li>
+          <li><div class="ph">[ảnh]</div><div>[Tiêu đề tin giải thưởng]<time>[ngày/tháng/năm]</time></div></li>
+        </ul>
+        <ul>
+          <li><div class="ph">[ảnh]</div><div>[Tiêu đề tin sản phẩm]<time>[ngày/tháng/năm]</time></div></li>
+          <li><div class="ph">[ảnh]</div><div>[Tiêu đề tin chứng nhận]<time>[ngày/tháng/năm]</time></div></li>
+          <li><div class="ph">[ảnh]</div><div>[Tiêu đề tin an toàn thực phẩm]<time>[ngày/tháng/năm]</time></div></li>
+        </ul>
+      </div>
+      <div class="center"><a class="btn" href="#">Xem thêm</a></div>
+    </div>
+  </section>
+
+  <section class="sec cream">
+    <div class="wrap">
+      <h2 class="sec-title">Đối tác của chúng tôi</h2>
+      <div class="divider"><i></i></div>
+      <div class="partners">
+        <span>Co.opmart</span><span>emart</span><span class="box">Bách hóa XANH</span><span>LOTTE Mart</span><span class="box">AEON</span><span>GO!</span><span>KINGFOOD</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <h3>CP Brand Vietnam</h3>
+      <p class="co">1. Công ty Cổ phần Chăn nuôi C.P. Việt Nam</p>
+      <p>Địa chỉ trụ sở: KCN Biên Hòa II, Đồng Nai, Việt Nam</p>
+      <p class="co">2. Công ty Cổ phần Chăn nuôi C.P. Việt Nam – Chi nhánh 3 tại TP. Hồ Chí Minh</p>
+      <p>Địa chỉ: KCN Tân Phú Trung, Củ Chi, TP. Hồ Chí Minh</p>
+      <p>Hotline: [số] · Email: [email]</p>
+    </div>
+    <div><h3>Chính sách</h3><ul><li>Chính sách bảo mật</li><li>Chính sách vận chuyển</li><li>Chính sách đổi trả</li><li>Quy định sử dụng</li></ul></div>
+    <div><h3>Danh mục sản phẩm</h3><ul><li>Thịt gà</li><li>Thịt heo</li><li>Thịt gà ướp sẵn</li><li>Thịt heo ướp sẵn</li><li>Gà chiên</li><li>Xúc xích</li><li>Cá, tôm, trứng</li><li>Ready meal, snack</li></ul></div>
+    <div><h3>Chứng nhận</h3><div class="chips"><span>FSSC 22000</span><span>ISO</span><span>BRCGS</span><span>LRQA</span><span>GLOBALG.A.P.</span><span>VietGAP</span></div></div>
+  </div>
+  <div class="copy">© Bản quyền thuộc về CP Brand Vietnam
+    <small>Bản mẫu học thuật phục vụ môn CCM301 – mô phỏng bố cục, không phải website chính thức của C.P. Việt Nam.</small>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  var toast = document.getElementById('toast'), t;
+  function say(m) { toast.textContent = m; toast.classList.add('show'); clearTimeout(t); t = setTimeout(function () { toast.classList.remove('show'); }, 2400); }
+  document.getElementById('searchForm').addEventListener('submit', function (e) { e.preventDefault(); say('Bản mẫu: ô tìm kiếm chỉ minh họa bố cục.'); });
+  document.querySelectorAll('a[href="#"]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); }); });
+  document.querySelectorAll('[data-tabs]').forEach(function (g) {
+    g.querySelectorAll('button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        g.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
